@@ -1,0 +1,8 @@
+<div class="message-content">
+        <div class="content">
+            <div *ngFor="let message of messages"><label>{{message.userId}} : </label>{{message.data}}</div>
+        </div>
+        <div>
+            Write message:<input type="text" [(ngModel)]="newMessage" class="form-control" (keyup.enter)="postMessage()"/>
+        </div>
+</div>

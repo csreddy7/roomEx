@@ -1,0 +1,18 @@
+<section class="login-container">
+    <h1>RoomEx</h1>
+    <form class="login-form" #loginForm="ngForm">
+        <div class="form-group">
+            <label class="control-label">Username</label>
+            <input class="form-control" name="username" #user="ngModel" [(ngModel)]="userId" value="" type="text"  required/>
+            <div [hidden]="!(user.invalid && user.dirty)">Username required</div>
+        </div>
+        <div name="login-name">{{userId}}</div>
+        <div class="form-group">
+                <label class="control-label">Password</label>
+                <input class="form-control" name="password" #pass="ngModel" [(ngModel)]="password" type="password"  required/>
+                <div [hidden]="!(pass.invalid && pass.dirty)">Password required</div>
+        </div>
+        <button class="btn  btn-primary" [disabled]="!loginForm.valid" (click)="validateUser()">Login</button>
+        <button class="btn  btn-primary" routerLink="/register">SignUp</button>
+    </form>
+</section>

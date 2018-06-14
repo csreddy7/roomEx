@@ -1,0 +1,67 @@
+<section class="register-container">
+    <form #registerForm="ngForm" (ngSubmit)="registerUser()" class="register-form">
+        <div class="form-group col-xs-12">
+            <label class="form-label col-xs-2">User Id :</label>
+            <div class="col-xs-10">
+              <input class="form-control" type="text" filterName="tcs" [(ngModel)]="userId" name="userId" #user_id="ngModel" required />
+            </div> 
+            <div *ngIf="(user_id.touched || user_id.dirty) && user_id.invalid" class="error">invalid name</div>
+        </div>
+        <div class="form-group col-xs-12">
+            <label class="form-label col-xs-2">Password :</label>
+            <div class="col-xs-10">
+              <input class="form-control" type="password" [(ngModel)]="userPassword" name="userPassword" #user_password="ngModel" required/>
+            </div> 
+        </div>
+        <div class="form-group col-xs-12">
+          <label class="form-label col-xs-2">Name :</label>
+          <div class="col-xs-10">
+            <input class="form-control" type="text" [(ngModel)]="userName" name="userName" #user_name="ngModel" required/>
+          </div> 
+        </div>
+        <div class="form-group col-xs-12">
+          <label class="form-label col-xs-2">Mobileno :</label>
+          <div class="col-xs-10">
+            <input class="form-control" type="number" [(ngModel)]="userMobile" name="userMobile" #user_mobile="ngModel" required/>
+          </div>
+          <div *ngIf="(user_mobile.touched || user_mobile.dirty) && user_mobile.invalid" class="error">invalid mobile number</div>
+        </div>
+        <div class="form-group col-xs-12">
+            <label class="form-label col-xs-2">Gender :</label>
+            <div class="col-xs-10">
+              <input  type="radio" [(ngModel)]="gender" name="gender" value="male"/>Male
+              <input  type="radio" [(ngModel)]="gender" name="gender" value="female"/>Female
+            </div> 
+        </div>
+        <div class="form-group col-xs-12">
+              <label class="form-label col-xs-2">Identity :</label>
+              <div class="col-xs-10">
+                <input  type="checkbox" [(ngModel)]="aadhar" name="aadhar" value="aadhar"/>Aadhar
+                <input  type="checkbox" [(ngModel)]="pan" name="pan" value="pan"/>PAN
+              </div> 
+          </div>
+          <div class="form-group col-xs-12">
+              <label class="form-label col-xs-2">State :</label>
+              <div class="col-xs-10">
+                <select [(ngModel)]="selectedState" name="state" class="state" required>
+                    <option  [ngValue]="defaultOption">{{defaultOption.name}}</option>
+                    <option *ngFor="let state of states" [ngValue]="state">{{state.name}}</option>
+                </select>
+              </div> 
+          </div>
+          <div class="form-group col-xs-12">
+              <label class="form-label col-xs-2">About you :</label>
+              <div class="col-xs-10">
+                <textarea [(ngModel)]="about" name="aboutUser" required>
+
+                </textarea> 
+              </div> 
+          </div>
+          <div class="form-group col-xs-12">
+              <label class="form-label col-xs-2"></label>
+              <div class="col-xs-10">
+                <input type="submit" value='Register' [disabled]="!registerForm.form.valid" class="register"/>
+              </div> 
+          </div>
+    </form>
+</section>

@@ -1,0 +1,46 @@
+.roomex-dialog{
+    height: 50rem;
+    width:50rem;
+    padding:1rem;
+    z-index: 1000;
+    position: fixed;
+    top:10%;
+    left:25%;
+    background-color: #fff;
+    border-radius: 0.5rem;
+    /* border:2px solid #1d8bac; */
+}
+
+.roomex-dialog h1{
+    color:#01acc1 !important;
+}
+.roomex-dialog header{
+    position: relative;
+}
+
+.roomex-dialog header h1{
+    margin: 0;
+    padding: 0;
+    text-align: center;
+    font-size: 3rem;
+}
+
+section{
+    color: #000;
+}
+
+.dialog-close{
+    background-image: url(../../../../assets/images/dialog-close.png);
+    height: 3rem;
+    width: 3rem;
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: absolute;
+    right: 0;
+    top:0;
+    cursor: pointer;
+}
+
+.data-container{
+    padding: 2rem;
+}

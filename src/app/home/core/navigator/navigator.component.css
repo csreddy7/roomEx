@@ -1,0 +1,23 @@
+.list{
+    border:1px solid #eee;
+    width: 100%;
+    list-style: none;
+    padding: 0;
+    height: 100%;
+    margin: 0;
+    border:0;
+}
+
+.list-item{
+    font-size: 3rem;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    padding: 2rem;
+    padding-top: 1rem;
+    outline: none;
+    width:100%;
+    color: #1d8bac;
+}
+.list-item:hover{
+    color: #a93e5b;
+    cursor: pointer;
+}

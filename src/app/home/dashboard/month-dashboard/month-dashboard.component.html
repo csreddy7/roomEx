@@ -1,0 +1,16 @@
+<div class="graph-container">
+  <div class="selection">
+      <select [(ngModel)]="selectedMonth" (change)="refreshDashboard()">
+        <option *ngFor="let month of months" [ngValue]="month">{{month.name}}</option>
+      </select>
+      <select [(ngModel)]="selectedYear" (change)="refreshDashboard()" >
+          <option *ngFor="let year of years" [ngValue]="year">{{year.name}}</option>
+      </select>
+  </div>
+  <svg class="svg-graph" width="1000" height="500">
+
+  </svg>
+  <div *ngIf="expenditures.length==0" class="empty-content">
+      <span>No content to display</span>
+  </div>
+</div>

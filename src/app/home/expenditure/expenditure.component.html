@@ -1,0 +1,52 @@
+<section >
+    <div class="selection">
+            <select [(ngModel)]="selectedMonth" (change)="refreshExpenditures()">
+                    <option *ngFor="let month of months" [ngValue]="month">{{month.name}}</option>
+                  </select>
+                  <select [(ngModel)]="selectedYear" (change)="refreshExpenditures()" >
+                      <option *ngFor="let year of years" [ngValue]="year">{{year.name}}</option>
+            </select>           
+    </div>
+  <h1>List of expenditures</h1>
+  <button (click)="addExpenditure()">Add Expenditure</button>
+  <table>
+      <thead>
+          <tr>
+              <th class="name">Name</th>
+              <th class="sponsor">Sponsor</th>
+              <th class="amount">Amount</th>
+              <th class="date">Date</th>
+          </tr>
+      </thead>
+      <tbody class="expenditure-content">
+          <tr *ngFor=" let expenditure of expenditures">
+              <td class="name">{{expenditure.commodityName}}</td>
+              <td class="sponsor">{{expenditure.sponsor}}</td>
+              <td class="amount">{{expenditure.amount}}</td>
+              <td class="date">{{expenditure.date}}</td>
+          </tr>
+      </tbody>
+  </table>
+  <h1> Amount sponsored by users</h1>
+  <table>
+        <thead>
+            <tr>
+                <th class="user-name">Name</th>
+                <th class="toatal-amount">Amount</th>
+                <th class="due">Amount due</th>
+            </tr>
+        </thead>
+        <tbody class="expenditure-content">
+            <tr *ngFor=" let obj of summary">
+                <td class="user-name">{{obj._id}}</td>
+                <td class="toatal-amount">{{obj.total}}</td>
+                <td class="due">{{averageAmount-obj.total}}</td>
+            </tr>
+        </tbody>
+    </table>
+    <div>
+        <label class="total-amount">Total amount spent : {{totalAmount}}</label>
+        <label class="total-users">Total no of users : {{summary.length}}</label>
+    </div>
+
+</section>

@@ -1,0 +1,21 @@
+.user-container{
+    height: 95%;
+}
+table{
+    height:88%;
+}
+button{
+    position: absolute;
+    top: 1.6rem;
+    right: 2rem;
+}
+
+.name{
+    width:50%;
+}
+.mobile{
+    width:50%;
+}
+.user-content{
+    max-height: calc(100% - 62px);
+}

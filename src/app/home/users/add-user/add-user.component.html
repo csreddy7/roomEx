@@ -1,0 +1,29 @@
+
+<form #addUserForm="ngForm">
+    <div class="form-group" >
+                <label>UserId</label>
+                <input type="text" name="userId" #userid="ngModel" class="form-control" [(ngModel)]="userId" required>
+                <div *ngIf="userid.invalid && (userid.touched || userid.dirty)" class="error">
+                    Room mate id required
+                </div>
+    </div>
+
+    <div class="form-group" >
+        <label>Name</label>
+        <input type="text" name="userName" #username="ngModel" class="form-control" [(ngModel)]="userName" required>
+        <div *ngIf="username.invalid && (username.touched || username.dirty)" class="error">
+            Room mate name required
+        </div>
+    </div>
+
+    <div >
+            <label>Phone No</label>
+            <input type="text" name="phoneNo" #phoneno="ngModel" class="form-control" [(ngModel)]="phoneNo" required>
+            <div *ngIf="phoneno.invalid && (phoneno.touched || phoneno.dirty)" class="error">
+                    Room mate phone number required
+            </div>
+    </div>
+    <footer>
+            <button (click)="save()" [disabled]="!addUserForm.form.valid">Save</button>
+    </footer>
+</form>

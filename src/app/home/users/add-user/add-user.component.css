@@ -1,0 +1,10 @@
+footer{
+    position: absolute;
+    bottom: 1rem;
+    right: 1rem;
+}
+
+button{
+    background: #1d8bac;
+    border:0;
+}

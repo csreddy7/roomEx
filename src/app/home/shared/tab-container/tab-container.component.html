@@ -1,0 +1,4 @@
+<ul class="tabs">
+    <li *ngFor="let tab of tabs" class="tab" (click)="showTab(tab)">{{tab.title}}</li>
+</ul>
+<div #tabContent ></div>

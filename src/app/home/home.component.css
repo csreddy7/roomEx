@@ -1,0 +1,68 @@
+.main-component{
+    height: 100%;
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    align-items:flex-start;
+}
+
+.left-container{
+    height: 100%;
+    width: 15%;
+}
+.navigation{
+    width:100%;
+    height: 87%;
+    background-color:#eee;
+}
+
+.messenger{
+    width:100%;
+    height: 6%;
+    background-color:#eee;
+}
+
+.profile{
+    width: 100%;
+    height: 7%;
+    background-color: #1d8bac;
+    padding: 1rem 3rem;
+    font-size: 2.4rem;
+    color: #eee;
+    border: 5px solid #eee;
+    position: relative;
+}
+
+.view-container{
+    width:85%;
+    height: 100%;
+    background-color: #1d8bac;
+}
+
+.message-icon{
+    position: absolute;
+    height: 2.5rem;
+    width: 2.5rem;
+    background: #eee;
+    top: 1.3rem;
+    right: 2rem;
+}
+
+.message-head{
+    position: absolute;
+    height: 2.5rem;
+    width: 2.5rem;
+    background: #1d8bac;
+    top: 0.5rem;
+    right: 2rem;
+    transform: rotate(-45deg);
+}
+
+.message-line{
+    position: absolute;
+    border-bottom: 1px solid #eee;
+    top: 2rem;
+    right: 2rem;
+    height: 2px;
+    width: 2.5rem;
+}

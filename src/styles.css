@@ -1,0 +1,108 @@
+/* You can add global styles to this file, and also import other style files */
+@import url('https://unpkg.com/bootstrap@3.3.7/dist/css/bootstrap.min.css');
+html,body{
+    margin: 0;
+    height: 100%;
+    font-family: "Times New Roman";
+}
+button{
+    background: none;
+    border:2px solid #ddd;
+    border-radius: 0.5rem;
+    height: 4rem;
+    width:11rem;
+    color: #ddd;
+    font-size: 2rem;
+    cursor: pointer;
+}
+
+section{
+    color: #ddd;
+}
+
+section>h1{
+    text-align: center;
+    font-size: 5rem;
+}
+
+select{
+    height: 2.5rem;
+    border: 1px solid #ddd;
+    border-radius: 3px;
+    font-size: 1.6rem;
+    text-transform: capitalize;
+}
+
+.active{
+    color:#a93e5b !important;
+}
+
+/** table styles ***/
+
+
+table{
+    width: 95%;
+    margin: 3rem auto;
+    border-collapse: collapse;
+    font-size: 3rem;
+    border: 1px solid #ddd;
+    display: block;
+}
+
+thead{
+    display: block;
+    width:100%;
+}
+
+tbody{
+    display: block;
+    width:100%;
+    overflow-y: auto;
+    min-height: 100px;
+}
+
+tr{
+    width:100%;
+    display:block;
+    border-bottom:1px solid #ddd;
+    overflow: hidden;
+}
+
+th{
+    background: #ddd;
+    color: #31708f;
+    border-right:1px solid #31708f;
+    padding:1rem;
+    padding-left: 3rem;
+    display:block;
+    float: left;
+}
+
+td{
+    border-right: 1px solid #ddd;
+    padding:1rem;
+    padding-left: 3rem;
+    display:block;
+    float: left;
+}
+
+table tr td:last-child{
+    border-right: 0;
+}
+
+table tr th:last-child{
+    border-right: 0;
+}
+
+table tr:last-child{
+    /* border-bottom:0; */
+}
+
+/*** table styles end **/
+
+
+.error{
+    color: red;
+}
+
+

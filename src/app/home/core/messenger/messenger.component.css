@@ -1,0 +1,92 @@
+.chat-container{
+    position: relative;
+}
+
+.chat-icon{
+    width:5rem;
+    height: 5rem;
+    position: absolute;
+    top:0;
+    left:1rem;
+    border-radius: 5rem;
+    background:url(../../../../assets/images/chat-icon2.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    cursor: pointer;
+}
+
+.user-group{
+    width:0;
+    position: fixed;
+    z-index: 1000;
+    left: 7rem;
+    overflow: hidden;
+}
+
+.message-container{
+    position: relative;
+    width:7rem;
+    height: 7rem;
+    float: left;
+}
+
+.chat-user{
+    width:5rem;
+    height: 5rem;
+    background: #31708f;
+    color: #eee;
+    text-align: center;
+    border-radius: 5rem;
+    cursor: pointer;
+    font-size: 3rem;
+    text-transform: capitalize;
+    margin-left: 1rem;
+}
+
+.message-notification{
+    position: absolute;
+    top: 0px;
+    height: 25px;
+    width: 25px;
+    border-radius: 20px;
+    background: #a93e5b;
+    right: 0px;
+    font-size: 1.6rem;
+    text-align: center;
+    z-index: 100;
+    cursor: pointer;
+    color: #eee;
+}
+
+.slide-animation{
+    animation: slide;
+    animation-duration: 1s;
+    animation-timing-function: ease-in-out;
+    animation-fill-mode: forwards;
+}
+
+@keyframes slide{
+    0%{
+        width:0;
+    }
+    100%{
+        width:100%;
+    }
+}
+
+.hide-animation{
+    animation: hide;
+    animation-duration: 1s;
+    animation-timing-function: ease-in-out;
+    animation-fill-mode: forwards;
+}
+
+@keyframes hide{
+    0%{
+        width:100%;
+    }
+    100%{
+        width:0;
+    }
+}

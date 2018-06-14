@@ -1,0 +1,9 @@
+<div class="chat-container">
+        <div class="chat-icon" (click)="showUsers();"> </div>
+        <div class="{{userGroupClass}}">
+                <div class="message-container" *ngFor="let user of users" (click)="openChatBox(user)">
+                        <div class="chat-user">{{user.name.charAt(0)}}</div>
+                        <div class="message-notification">1</div>
+                </div>
+        </div>
+</div>

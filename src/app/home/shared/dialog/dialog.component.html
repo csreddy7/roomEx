@@ -1,0 +1,10 @@
+<div class="roomex-dialog" [ngStyle]="styleObj">
+  <header>
+    <h1>{{title}}</h1>
+    <span class="dialog-close" (click)="cancel()"></span>
+  </header>
+  <section class="data-container">
+    <div [innerText]="content" ></div>
+    <ng-template component-host></ng-template>
+  </section>
+</div>

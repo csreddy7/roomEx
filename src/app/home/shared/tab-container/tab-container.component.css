@@ -1,0 +1,19 @@
+.tabs{
+    margin-top: 3rem;
+}
+.tab{
+    display: inline-block;
+    width: 32%;
+    text-align: center;
+    color: #1d8bac;
+    background-color: #eee;
+    padding: 1rem;
+    border-radius: 2px;
+    margin-right: 1rem;
+    font-size: 2rem;
+    cursor: pointer;
+}
+.tab:hover{
+    background-color:#ddd;
+}
+

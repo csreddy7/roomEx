@@ -1,0 +1,50 @@
+
+button{
+    position: absolute;
+    top: 1.6rem;
+    right: 2rem;
+    width: 20rem;
+}
+
+.expenditure-content{
+    max-height: 250px;
+}
+
+.name{
+    width:30%;
+}
+
+.sponsor{
+    width:30%;
+}
+
+.amount{
+    width:15%;
+}
+
+.date{
+    width:25%;
+}
+
+.user-name{
+    width:40%;
+}
+
+.toatal-amount{
+    width:40%;
+}
+
+.due{
+    width:20%;
+}
+
+.total-amount,.total-users{
+    font-size: 2.6rem;
+    margin-left: 2rem;
+}
+
+.selection{
+    text-align: center;
+    color:#000;
+    padding: 2rem;
+}

@@ -1,0 +1,40 @@
+.graph-container{
+    width:90%;
+    height:calc(100% - 15rem);
+    margin:2rem auto;
+    background: #eee;
+    border-radius: 2px;
+    position: relative;
+}
+
+.graph-container .svg-graph{
+    width: 100%;
+    margin: 15% auto;
+}
+
+.graph-container .selection{
+    position: absolute;
+    right: 1rem;
+    top: 1rem;
+}
+
+
+.graph-container .empty-content{
+    position: absolute;
+    top: 40%;
+    left: 30%;
+    font-size: 5rem;
+    color: #a93e5b;
+    text-transform: capitalize;
+    transform: rotate(-45deg);
+}
+
+.arc text {
+    font: 10px sans-serif;
+    text-anchor: middle;
+  }
+  
+  .arc path {
+    stroke: #fff;
+  }
+  

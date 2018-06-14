@@ -1,0 +1,42 @@
+
+<form #addExpenditureForm="ngForm">
+  <div class="form-group" >
+      <label>*Name</label>
+      <input type="text" name="commodityName" #commodityname="ngModel" list="expenditureList" class="form-control" [(ngModel)]="commodityName" required>
+      <div *ngIf="commodityname.invalid && (commodityname.touched || commodityname.dirty)" class="error">
+          Commodity name required
+      </div>
+      <datalist id="expenditureList">
+                <option *ngFor="let expenditure of expenditures" [value]="expenditure.name">
+                </option>
+      </datalist>
+  </div>
+  <div class="form-group" >
+    <label>*Sponsor</label>
+    <select [(ngModel)]="sponsor" class="form-control" name="sponsor" required #sponsorname="ngModel">
+        <option *ngFor="let sponsor of sponsors" [value]="sponsor.name">
+                {{sponsor.name}}
+        </option>
+    </select>
+    <div *ngIf="sponsorname.invalid && (sponsorname.touched || sponsorname.dirty)" class="error">
+            Sponsor required
+    </div>
+</div>
+ <div class="form-group">
+          <label>*Amount</label>
+          <input type="number" name="amount" #amountspent="ngModel" class="form-control" [(ngModel)]="amount" required>
+          <div *ngIf="amountspent.invalid && (amountspent.touched || amountspent.dirty)" class="error">
+                  Amount required
+          </div>
+  </div>
+  <div class="form-group">
+        <label>*Date</label>
+        <input type="date" name="date" #datespent="ngModel" class="form-control" [(ngModel)]="date" required>
+        <div *ngIf="datespent.invalid && (datespent.touched || datespent.dirty)" class="error">
+                Date Required
+        </div>
+</div>
+  <footer>
+          <button (click)="save()" [disabled]="!addExpenditureForm.form.valid">Save</button>
+  </footer>
+</form>
